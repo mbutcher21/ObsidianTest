@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { ConfluenceClient } from 'confluence.js';
 import * as dotenv from 'dotenv';
+import cron from 'node-cron';
 
 dotenv.config({ path: path.resolve(__dirname, './.env') });
 
@@ -116,3 +117,6 @@ async function publishDocs() {
 }
 
 publishDocs().catch(console.error);
+
+// Schedule the script to run every Sunday at midnight
+// cron.schedule('0 0 * * 0', publishDocs).catch(console.error);

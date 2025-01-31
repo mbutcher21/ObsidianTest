@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "confluence.js": "^1.7.4",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "node-cron": "^3.0.3"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.3",
